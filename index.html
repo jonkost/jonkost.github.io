@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jon Kost</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0a0a0a;
+      color: #f0ede8;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .wrap {
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .grid-lines {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.04;
+    }
+
+    .rule {
+      width: 48px;
+      height: 2px;
+      background: #f0ede8;
+      margin: 0 auto 2.5rem;
+      animation: fadeUp 0.6s ease both;
+      animation-delay: 0.1s;
+    }
+
+    h1 {
+      font-size: clamp(36px, 8vw, 56px);
+      font-weight: 500;
+      letter-spacing: -1.5px;
+      color: #f0ede8;
+      line-height: 1.05;
+      margin: 0 0 1rem;
+      animation: fadeUp 0.6s ease both;
+      animation-delay: 0.2s;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #888;
+      margin: 0 0 2.5rem;
+      animation: fadeUp 0.6s ease both;
+      animation-delay: 0.3s;
+    }
+
+    .bio {
+      font-size: 16px;
+      color: #aaa;
+      max-width: 380px;
+      line-height: 1.7;
+      margin: 0 auto 3rem;
+      animation: fadeUp 0.6s ease both;
+      animation-delay: 0.4s;
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #555;
+      border: 0.5px solid #2a2a2a;
+      border-radius: 999px;
+      padding: 6px 16px;
+      animation: fadeUp 0.6s ease both;
+      animation-delay: 0.5s;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #555;
+      animation: blink 1.8s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <svg class="grid-lines" viewBox="0 0 700 420" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0" y1="105" x2="700" y2="105" stroke="white" stroke-width="1"/>
+      <line x1="0" y1="210" x2="700" y2="210" stroke="white" stroke-width="1"/>
+      <line x1="0" y1="315" x2="700" y2="315" stroke="white" stroke-width="1"/>
+      <line x1="175" y1="0" x2="175" y2="420" stroke="white" stroke-width="1"/>
+      <line x1="350" y1="0" x2="350" y2="420" stroke="white" stroke-width="1"/>
+      <line x1="525" y1="0" x2="525" y2="420" stroke="white" stroke-width="1"/>
+    </svg>
+
+    <div class="rule"></div>
+    <h1>Jon Kost</h1>
+    <p class="subtitle">Creator &nbsp;&nbsp; Producer &nbsp;&nbsp; Educator</p>
+    <p class="bio">Jon Kost is a creator, producer, and educator based in Florida. This is home to his work. Site coming soon.</p>
+    <div class="status">
+      <span class="dot"></span>
+      Currently updating
+    </div>
+  </div>
+</body>
+</html>
